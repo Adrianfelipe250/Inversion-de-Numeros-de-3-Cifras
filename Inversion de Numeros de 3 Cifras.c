@@ -1,16 +1,15 @@
 #include<stdio.h>
-
+int a,b,c,valor,residuo1,residuo2,residuo3;
 int main (){	
 	printf("Programa para Inversion de Numeros de 3 Cifras. \n");
-	printf("Introduce el Primer Numero: ");
-	int numero1 = 0;
-	scanf("%d", &numero1);
-	printf("Introduce el segundo Numero: ");
-	int numero2 = 0;
-	scanf("%d", &numero2);
-	printf("Introduce el Tercer Numero: ");
-	int numero3 =0;
-	scanf("%d", &numero3);
-	printf("El numero %d%d%d en su Forma Invertida es = %d%d%d", numero1,numero2,numero3,numero3,numero2,numero1);
+	printf("Introduce un numero de 3 cifras: ");
+	scanf("%d", &valor);
+	a = valor / 100;
+	residuo1 = valor%100;
+	b = residuo1 / 10;
+	residuo2 = residuo1%10;
+	c = residuo2 / 1;
+	residuo3 = residuo2%1;
+	printf("El numero %d en su Forma Invertida es = %d%d%d",valor,c,b,a);
 	return 0;
 }
